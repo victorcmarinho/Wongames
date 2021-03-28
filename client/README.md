@@ -21,7 +21,22 @@ This project uses lot of stuff as:
 
 ## Getting Started
 
-First, run the development server:
+First, install postgres DB, I using docker for example:
+
+```bash
+    docker pull postgres
+    docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres // install and create postgress data base
+    docker exect -it <CONTAINERID> bash
+    psql -U postgres
+    CREATE USER wongames WITH ENCRYPTED PASSWORD 'wongames123';
+    CREARE DATAVASE wongames OWNER wongames;
+
+```
+
+here, we create postgres DB in docker and create user and wongamesDB
+
+
+Run the development server:
 
 ```bash
 npm run dev
