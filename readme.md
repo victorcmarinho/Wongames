@@ -69,6 +69,29 @@ The urls to access are:
 
 The first time to access the Admin you'll need to create an user.
 
+
+## Postgres DB
+
+You need install Postgres DB for start Strapi API
+
+Install Docker in yout machine
+
+```bash
+docker pull postgres
+
+docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres 
+
+docker exec -it [ID-Container] bash
+
+psql -U postgres
+
+CREATE USER wongames WITH ENCRYPTED PASSWORD 'wongames123';
+
+CREATE DATABASE wongames OWNER wongames;
+
+
+```
+
 ## Populate data
 
 This project uses a `/games/populate` route in order to populate the data via GoG site.
