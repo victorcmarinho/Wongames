@@ -16,7 +16,7 @@ export default function Index(props: HomeTemplateProps) {
 // getInitialProps => gerar via ssr a cada request (vai para o client, faz hydrate do lado do client depois do 1 req)
 export async function getStaticProps() {
   const apolloClient = initializeApollo()
-  const TODAY = new Date().toISOString().slice(0, 10) // 2021-01-27
+  const TODAY = new Date().toISOString().slice(0, 10)
 
   const {
     data: { banners, newGames, upcomingGames, freeGames, sections }
