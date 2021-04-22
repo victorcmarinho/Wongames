@@ -1,6 +1,6 @@
 # Wongame
 
-![Wongames]()
+![Wongames](https://raw.githubusercontent.com/victorcmarinho/Wongames/main/image/preview.png)
 
 Game store design using Strapi, NextJs, React and Typescript
 
