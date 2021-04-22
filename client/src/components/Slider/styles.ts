@@ -51,6 +51,7 @@ export const Wrapper = styled.section`
     left: 0;
 
     display: block;
+    height: auto !important;
   }
   .slick-track:before,
   .slick-track:after {
