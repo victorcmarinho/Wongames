@@ -34,6 +34,10 @@ exports[`<GameInfo /> should render game informations 1`] = `
   padding: 0.8rem 4.8rem;
 }
 
+.c6:focus {
+  box-shadow: 0 0 0 3px #3CD3C1;
+}
+
 .c6:hover {
   background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
 }
@@ -73,6 +77,10 @@ exports[`<GameInfo /> should render game informations 1`] = `
   padding: 0.8rem 4.8rem;
   background: none;
   color: #F231A5;
+}
+
+.c8:focus {
+  box-shadow: 0 0 0 3px #3CD3C1;
 }
 
 .c8:hover {
@@ -120,6 +128,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
   align-items: center;
   font-weight: 600;
   color: #FAFAFA;
+  z-index: 10;
   background-color: #3CD3C1;
   font-size: 1.4rem;
   padding: 0 2.4rem;
@@ -227,6 +236,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
 
 <div
   class="c0"
+  data-cy="game-info"
 >
   <h2
     class="c1"
@@ -249,11 +259,11 @@ exports[`<GameInfo /> should render game informations 1`] = `
     class="c5"
   >
     <button
+      aria-label="Add to cart"
       class="c6"
     >
       <svg
         aria-hidden="true"
-        aria-label="Add to cart"
         class="c7"
         fill="currentColor"
         focusable="false"
@@ -274,9 +284,11 @@ exports[`<GameInfo /> should render game informations 1`] = `
     </button>
     <button
       class="c8"
+      style="filter: none;"
     >
       <svg
         aria-hidden="true"
+        aria-label="Add to Wishlist"
         class="c7"
         fill="currentColor"
         focusable="false"
@@ -292,7 +304,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
         />
       </svg>
       <span>
-        Wishlist
+        Add to Wishlist
       </span>
     </button>
   </div>

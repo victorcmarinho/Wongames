@@ -23,7 +23,7 @@ const CartList = ({ hasButton = false }: CartListProps) => {
   }
 
   return (
-    <S.Wrapper isEmpty={!items.length}>
+    <S.Wrapper isEmpty={!items.length} data-cy="cart-list">
       {items.length ? (
         <>
           <S.GamesList>
@@ -37,7 +37,7 @@ const CartList = ({ hasButton = false }: CartListProps) => {
             <S.Total>{total}</S.Total>
 
             {hasButton && (
-              <Link href="/cart">
+              <Link href="/cart" passHref>
                 <Button as="a">Buy it now</Button>
               </Link>
             )}

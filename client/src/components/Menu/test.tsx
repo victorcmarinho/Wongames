@@ -2,6 +2,13 @@ import { render, screen, fireEvent } from 'utils/test-utils'
 
 import Menu from '.'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+
+useRouter.mockImplementation(() => ({
+  query: {}
+}))
+
 describe('<Menu />', () => {
   it('should render the menu', () => {
     render(<Menu />)
@@ -51,7 +58,7 @@ describe('<Menu />', () => {
     expect(screen.queryByText(/sign up/i)).not.toBeInTheDocument()
   })
 
-  it('should not show sign ir or dropdownUser if loading', () => {
+  it('should not show sign in or dropdownUser if loading', () => {
     render(<Menu username="will" loading />)
 
     expect(screen.queryByText(/my profile/i)).not.toBeInTheDocument()

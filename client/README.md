@@ -1,7 +1,5 @@
 
-# Wongames
-
-![Wongames](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
+![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
 
 This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
@@ -18,25 +16,11 @@ This project uses lot of stuff as:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
+- [Cypress](https://www.cypress.io/)
 
 ## Getting Started
 
-First, install postgres DB, I using docker for example:
-
-```bash
-    docker pull postgres
-    docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres // install and create postgress data base
-    docker exect -it <CONTAINERID> bash
-    psql -U postgres
-    CREATE USER wongames WITH ENCRYPTED PASSWORD 'wongames123';
-    CREARE DATAVASE wongames OWNER wongames;
-
-```
-
-here, we create postgres DB in docker and create user and wongamesDB
-
-
-Run the development server:
+First, run the development server:
 
 ```bash
 npm run dev
